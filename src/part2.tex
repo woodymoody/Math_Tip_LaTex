@@ -1,0 +1,268 @@
+%--------------------------------------------Problem 1--------------------------------------	
+\subsection*{\center Задача №1.}
+\textbf{Условие:}\\
+Дана последовательность $\{a_n\}=\dfrac{n+1}{3n+1}$ и число $c= \dfrac{1}{3}$. Доказать, что: 
+$$
+\begin{array}{l}
+\lim\limits_{x\to\infty}a_n = c, \\ [8pt]
+\lim\limits_{x\to\infty}\dfrac{n+1}{3n+1}=\dfrac{1}{3},\\	
+\end{array}
+$$
+а именно, для каждого сколь угодно малого числа $\eps>0$ найти наименьшее натуральное число 
+$N=N(\eps)$ такое, что $|a_n-c|<\eps$ для всех номеров $n>N(\eps)$.
+Заполнить таблицу
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$\eps$ &  $0{,}1$ & $0{,}01$ & $0{,}001$ \\
+		\hline
+		$N(\eps)$ & & & \\
+		\hline
+	\end{tabular}
+\end{center}
+\textbf{Решение:}\\
+По определению предела последовательности:
+$$\left|\dfrac{n+1}{3n-1} - \dfrac{1}{3}\right| < \eps, $$
+$$\dfrac{4}{3}\left|\dfrac{1}{3n-1}\right| < \eps.$$
+
+$n$ принимает только натуральные значения, следовательно помодульное выражение всегда будет положительным. Расскроем модуль и выразим $n$:
+$$n > \dfrac{1}{3} + \dfrac{4}{9\eps}$$
+Поочерёдно подставим $\eps$ и найдём $N(\eps)$:
+$$
+\begin{array}{l}
+\eps=0{,}1;\quad  n > \dfrac{43}{9}\Rightarrow N_\eps=4; \\[10pt]
+\eps=0{,}01;\quad  n > \dfrac{403}{9}\Rightarrow N_\eps=44;\\[10pt]
+\eps=0{,}001;\quad  n > \dfrac{4003}{9}\Rightarrow N_\eps=444.\\	
+\end{array}
+$$
+\textbf{Заполним таблицу:}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$\eps$ &  $0{,}1$ & $0{,}01$ & $0{,}001$ \\
+		\hline
+		$N(\eps)$ & $4$ & $44$ & $444$ \\
+		\hline
+	\end{tabular}
+\end{center}
+\textbf{Сделаем проверку:}\\
+$$
+\begin{array}{l}
+		|a_5-c| = \dfrac{2}{21} < 0{,}1;\\ [10pt]
+		|a_{45}-c| = \dfrac{2}{201} < 0{,}01;\\[10pt]
+		|a_{445}-c| = \dfrac{2}{2001} < 0{,}001.\\ 
+\end{array}
+$$
+%------------------------------------Problem 2-------------------------------------------
+\newpage
+\subsection*{\center Задача №2.}
+$$
+\begin{array}{cc}
+\text{\bf{(а)}:}&\lim\limits_{x\to1}\dfrac{x^3+x^2-5x+3}{x^3-x^2-x+1},\\[12pt]
+\text{\bf{(б)}:}&\lim\limits_{x\to+\infty}\dfrac{\sqrt{2x^4+3}-\sqrt{x^3}+\sqrt[3]{x^5}}{(x^2+9)^{\frac{3}{2}}}, \\[14pt]
+\text{\bf{(в)}:}&\lim\limits_{x\to4}\dfrac{\sqrt{1+2x}-3}{\sqrt{x}-2},\\[14pt]
+\text{\bf{(г)}:}&\lim\limits_{x\to0}(1+\sin^2{3x})^{\frac{1}{\ln{\cos{x}}}}, \\[12pt]
+\text{\bf{(д)}:}&\lim\limits_{x\to0}(\cos{2x})^{\frac{x+2}{x-2}}, \\[12pt]
+\text{\bf{(е)}:}&\lim\limits_{x\to\frac{\pi}{4}}\dfrac{1-\sin{2x}}{(\pi-4x)^2}.\\
+\end{array}
+$$
+\textbf{Решение:}\\
+\textbf{(a):}
+$$
+\begin{array}{l}
+	\lim\limits_{x\to1}\dfrac{x^3+x^2-5x+3}{x^3-x^2-x+1} = \left[\dfrac{0}{0}\right] =
+	\lim\limits_{x\to1}\dfrac{(x-1)^2(x+3)}{(x-1)^2(x+1)} = \dfrac{4}{2} = 2.	
+\end{array}
+$$
+\\
+\\
+\textbf{(б):}
+$$
+\begin{array}{l}
+	\lim\limits_{x\to+\infty}\dfrac{\sqrt{2x^4+3}-\sqrt{x^3}+\sqrt[3]{x^5}}{(x^2+9)^{\frac{3}{2}}} =
+	 \left[\dfrac{\infty}{\infty}\right] = 
+	 	\biggl|
+	 \begin{array}{l}
+	 	\sqrt{2x^4+3}-\sqrt{x^3}+\sqrt[3]{x^5} \sim \sqrt{2}x^2,\quad x \to \infty \\
+	 	(x^2+9)^{\frac{3}{2}} \sim x^3,\quad x \to \infty \\
+	 \end{array}
+	 \biggr| = 
+	 \lim\limits_{x\to+\infty}\dfrac{\sqrt{2}x^2}{x^3} =\\ = 0.
+\end{array}
+$$
+\\
+\\
+\textbf{(в):}
+$$
+\begin{array}{l}
+	\lim\limits_{x\to4}\dfrac{\sqrt{1+2x}-3}{\sqrt{x}-2} = 
+	\left[\dfrac{0}{0}\right] = 
+	\lim\limits_{x\to4}\dfrac{2(x-4)(\sqrt{x}+2)}{(x-4)(\sqrt{1+2x}+3)} = 
+	\lim\limits_{x\to4}\dfrac{2(\sqrt{x}+2)}{(\sqrt{1+2x}+3)} = 
+	\dfrac{4}{3}.
+\end{array}
+$$
+\\
+\\
+\textbf{(г):}
+$$
+\begin{array}{l}
+\lim\limits_{x\to0}(1+\sin^2{3x})^{\frac{1}{\ln{\cos{x}}}} = 
+\left[1^{\infty}\right] = 
+e^{\lim\limits_{x\to 0}\frac{\sin^2{3x}}{\ln{\cos{x}}}} =
+\biggl| 
+\begin{array}{l}
+	\cos{x} = 1 + t \Rightarrow \ln{(1+t)} \sim t, \quad t \to 0 \\
+	\sin^2{3x} \sim 9x^2,\quad x \to 0 \\	
+\end{array}
+\biggr|
+= e^{\lim\limits_{x\to0}\frac{9x^2}{\cos{x}-1}} = \\ [14pt]
+= \biggl| 
+\begin{array}{l}
+	\cos{x}-1 \sim -\dfrac{x^2}{2}, \quad x \to 0
+\end{array}
+\biggr|
+= e^{\lim\limits_{x\to 0}\frac{-18x^2}{x^2}}
+= e^{-18}.
+\end{array}
+$$
+\\
+\\
+\textbf{(д):}
+$$
+\begin{array}{l}
+	\lim\limits_{x\to0}(\cos{2x})^{\frac{x+2}{x-2}} =
+	\lim\limits_{x\to0}1^{-1} = 1.	
+\end{array}
+$$
+\\
+\\
+\textbf{(e):}
+$$
+\begin{array}{l}
+	\lim\limits_{x\to\frac{\pi}{4}}\dfrac{1-\sin{2x}}{(\pi-4x)^2} = 
+	\left[\dfrac{0}{0}\right] = 
+	\biggl|
+	\begin{array}{l}	
+		\pi - 4x = t, \quad t \to 0		
+	\end{array}
+    \biggr|
+    =\lim\limits_{t\to0}\dfrac{1-\cos{\frac{t}{2}}}{t^2} 
+    = \biggl| \begin{array}{l}
+    	1 - \cos{\dfrac{t}{2}} \sim \dfrac{t^2}{8}
+      \end{array} \biggr|
+    =\lim\limits_{t\to0}\dfrac{t^2}{8t^2}
+    =\dfrac{1}{8}.  	
+\end{array}
+$$
+\newpage
+\subsection*{\center Задача №3.}
+\textbf{Условие:}\\
+\textbf{(а):} Показать, что данные функции
+$f(x)$ и $g(x)$ являются бесконечно малыми или бесконечно большими
+при указанном стремлении аргумента. \\
+\textbf{(б):} Для каждой функции $f(x)$ и $g(x)$ записать главную часть
+(эквивалентную ей функцию)  вида $C(x-x_0)^{\alpha}$ при $x\rightarrow x_0$ или $Cx^{\alpha}$
+при $x\rightarrow\infty$, указать их порядки малости (роста). \\
+\textbf{(в):} Сравнить функции $f(x)$ и $g(x)$ при указанном стремлении.
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		№ варианта & функции $f(x)$ и $g(x)$ & стремление \\[6pt]
+		%\hline
+		30 & $f(x) =\dfrac{1}{x}-\dfrac{1}{x^3},~g(x)=\ln{\cos{\dfrac{1}{x}}}$ & $x\rightarrow\infty$ \\ [6pt]
+		\hline 
+	\end{tabular}
+\end{center}
+\textbf{Решение:}\\
+\textbf{(a)}
+Убедимся, что обе функции при заданном стремлении являются бесконечно малыми:
+$$
+\begin{array}{l}
+	\lim\limits_{x\to\infty}\dfrac{1}{x}-\dfrac{1}{x^3} = 0 ~ \text{- БМ} \\ [12pt]
+	\lim\limits_{x\to\infty}\ln{\cos{\dfrac{1}{x}}} = 0 ~ \text{- БМ} \\
+\end{array}
+$$
+\textbf{(б)}~Так как $f(x)$ и $g(x)$ бесконечно малые функции, то эквивалентными им будут функции вида 
+$Cx^{\alpha}$ при $x\rightarrow\infty$.\\ Найдём эквивалентную для $f(x)$:
+$$
+f(x) = \dfrac{1}{x}-\dfrac{1}{x^3} \sim \dfrac{1}{x}, ~ x \to \infty 
+$$ 
+Отсюда следует, что для \fbox{$f(x): C = 1; ~ \alpha = -1 $}.\\
+Найдём эквивалентную для $g(x)$:
+$$
+\begin{array}{l}
+g(x) = \ln{\cos{\dfrac{1}{x}}} \sim \left| 
+\begin{array}{l}
+	\cos{\dfrac{1}{x}} = 1 + t, ~ t \to 0 \\ [10pt]
+	\ln{(1+t)} \sim t = \cos{\dfrac{1}{x}} - 1 \\ [10pt] 
+\end{array} \right|
+\sim \cos{\dfrac{1}{x}} - 1 \sim \left|
+\begin{array}{l}
+	\dfrac{1}{x} = z, ~ z \to 0 \\[10pt]
+	\cos{z} - 1 \sim -\dfrac{z^2}{2} = -\dfrac{1}{2x^2}\\
+\end{array} \right|
+\sim -\dfrac{1}{2x^2}.
+\end{array}
+$$
+Отсюда следует, что для \fbox{$g(x): C = -\dfrac{1}{2}; ~ \alpha = -2 $}.\\
+\textbf{(в)}~ Найдём предел отношения заданных функций, применяя эквивалентности, найденные выше:
+$$
+\lim\limits_{x \to \infty}\dfrac{\ln{\cos{\frac{1}{x}}}}{\frac{1}{x}-\frac{1}{x^3}} = 
+\lim\limits_{x \to \infty}\dfrac{x}{-2x^2} = 0.
+$$
+Из этого следует, что $g(x) = o(f(x))$.
+\newpage
+\subsection*{\center Задача №4.}
+\textbf{Условие:}\\
+Найти точки разрыва функции 
+$$
+y = f(x) \equiv 
+\begin{cases}
+	\dfrac{\sin{\pi x}}{\arcsin{x}},&\quad |x|\leq 1, \\[10pt]
+	1+\sqrt[3]{x},&\quad |x|>1.
+\end{cases}
+$$ 
+и определить их характер. Построить фрагменты графика функции в окрестности каждой точки разрыва. \\
+\textbf {Решение:}\\
+Особыми точками являются точки $x=0,\,1,\,-1$. Рассмотрим односторонние пределы в окресности каждой из особых точек:
+$$
+\begin{array}{l}
+	\lim\limits_{x\to0+0}\dfrac{\sin{\pi x}}{\arcsin{x}}=
+	\lim\limits_{x\to0-0}\dfrac{\sin{\pi x}}{\arcsin{x}}=
+	\pi, ~ \Rightarrow x = 0 \text{ - разрыв первого рода устраннимый.}\\[10pt]
+	\lim\limits_{x\to1+0}1+\sqrt[3]{x} = 2, \quad \lim\limits_{x\to1-0}\dfrac{\sin{\pi x}}{\arcsin{x}} = 0, ~ \Rightarrow x = 1 \text{ - разрыв первого рода неустраннимый.}\\[10pt]
+	\lim\limits_{x\to-1-0}1+\sqrt[3]{x} =\lim\limits_{x\to-1+0}\dfrac{\sin{\pi x}}{\arcsin{x}} = f(-1) = 0, ~ \Rightarrow x = -1 \text{ - не точка разрыва.} 
+\end{array}
+$$
+\begin{center}
+	\begin{tikzpicture}		
+		\begin{axis}[xmin=-4.5,
+			xmax=9.5, 
+			ymin=-5.5,
+			ymax=7.5,
+			width=\textwidth,
+			height=0.75\textwidth,
+			axis x line=middle,
+			axis y line=middle, 
+			every axis x label/.style={at={(current axis.right of origin)},anchor=west},
+			every inner x axis line/.append style={|-latex'},
+			every inner y axis line/.append style={|-latex'},
+			minor tick num=1,			
+			axis equal=true,
+			xlabel=$x$, 
+			ylabel=$y$,          
+			samples=600,
+			clip=true,
+			]
+			\addplot[color=black, line width=1.5pt,domain=-4.5:-1] {1 - abs(\x)^(1/3)};
+			\addplot[color=black, line width=1.5pt,domain=-1:1]{sin(deg(x*pi))/rad(asin(\x))};
+			\addplot[color=black, line width=1.5pt,domain=1:9.5]{1 + \x^(1/3)};
+			\addplot[
+			mark=*,
+			mark options={fill=white, draw=black},
+			only marks,
+			] coordinates {(1, 2) (1, 0) (0,pi)};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
